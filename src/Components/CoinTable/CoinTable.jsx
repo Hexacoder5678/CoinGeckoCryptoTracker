@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { fetchCoinData } from "../../Services/fetchCoinData";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { CurrencyContext } from "../context/CurrencyContext";
 
 function CoinTable() {
