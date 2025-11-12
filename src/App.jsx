@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import Home from "./Components/Home/Home";
 import { CurrencyContext } from "./Components/context/CurrencyContext";
+import Routing from "./Components/Routing/Routing";
 
 function App() {
   const [currency, setCurrency] = useState("usd");
@@ -9,7 +9,7 @@ function App() {
   return (
     <CurrencyContext.Provider value={{ currency, setCurrency }}>
       <div className="min-h-screen text-white bg-black">
-        <Home />
+        <Routing/>
       </div>
     </CurrencyContext.Provider>
   );
