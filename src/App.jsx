@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { CurrencyContext } from "./Components/context/CurrencyContext";
 import Routing from "./Components/Routing/Routing";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const [currency, setCurrency] = useState("usd");

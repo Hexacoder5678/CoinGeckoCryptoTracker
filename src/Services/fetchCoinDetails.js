@@ -1,9 +1,8 @@
-import axiosInstance from "../helpers/axiosInstance";
+import axios from "axios";
 
 export async function fetchCoinDetails(id) {
-  const perPage = 10;
   try {
-    const response = await axiosInstance.get('./coins/${id}');
+    const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error fetching coin data:", error);
