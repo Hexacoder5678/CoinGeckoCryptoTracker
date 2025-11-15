@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchCoinDetails } from "../../Services/fetchCoinDetails.js";
 import parse from "html-react-parser";
 import currencyStore from "../../state/store";
+import CoinInfoContainer from "../CoinInfo/CoinInfoContainer.jsx";
 function CoinDetailsPage(){
 
     const {coinId}=useParams();
@@ -39,7 +40,7 @@ function CoinDetailsPage(){
               <span className="ml-3 text-xl">{coin?.market_data.current_price[currency]}</span>
             </div>
         </div>
-        <div className="w-full p-6 md:w-2/3">Coin Information</div>
+        <div className="w-full md:w-2/3"><CoinInfoContainer coinId={coinId}/></div>
       </div>
    )
 }
